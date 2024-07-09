@@ -21,8 +21,7 @@ The project utilizes Scrapy, Selenium, and Python to gather and analyze data rel
 
 1. **Clone the repository:**
    ```sh
-   git clone 
-   cd london-food-delivery-scraper
+   git clone https://github.com/karthick0502/London-Food-Delivery-Scraper.git
    ```
 
 2. **Create and activate a virtual environment:**
