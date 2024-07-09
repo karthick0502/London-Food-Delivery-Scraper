@@ -38,7 +38,7 @@ The project utilizes Scrapy, Selenium, and Python to gather and analyze data rel
 4. **Download the appropriate WebDriver:**
    - For Chrome, download from [here](https://googlechromelabs.github.io/chrome-for-testing/)
    - Make sure to download the WebDriver based on the chrome version you are using it.
-   - replace the chromedriver.exe file with your downloaded file and make sure the changes should apply to your settings.py file same here.
+   - replace the chromedriver.exe file (inside the UK_Restaurants folder) with your downloaded file and make sure the changes should apply to your settings.py file same here.
      ```sh
      SELENIUM_DRIVER_EXECUTABLE_PATH = <Your chromedriver path>
      ```
@@ -47,11 +47,28 @@ The project utilizes Scrapy, Selenium, and Python to gather and analyze data rel
 
 1. **Run the scraper:**
    ```sh
-   scrapy crawl deliveroo_spider --output deliveroo-london.csv
+   cd UK_Restaurants
+   scrapy crawl deliveroo --output deliveroo-london.csv
    ```
 
 2. **View the scraped data:**
    - The data will be saved in the `output` folder in CSV format.
+   
+## Focus
+Here are some additional details about its functionality:
+
+**Dynamic Content Loading:**
+
+Most delivery apps load content dynamically using JavaScript. To capture this data, the project parses JavaScript functions to enable data extraction once it's loaded.
+
+**Scrolling Mechanism:**
+
+This project includes a scrolling mechanism that automatically scrolls through the entire page. 
+
+Once the scrolling reaches the end, the scraping process begins. 
+
+This is necessary because certain content is only enabled after scrolling.
+  
 
 ## Expanding the Project
 I am planning to the expand projects on below,
